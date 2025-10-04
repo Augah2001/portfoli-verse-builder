@@ -4,22 +4,46 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce solution with real-time inventory management, payment processing, and responsive design.",
-    tags: ["React", "Node.js", "PostgreSQL", "Stripe"],
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
+    title: "Game Hub",
+    description: "A comprehensive game discovery platform built with React and TypeScript, featuring game browsing, filtering, and detailed information.",
+    tags: ["TypeScript", "React", "Vite", "API Integration"],
+    image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&q=80",
+    github: "https://github.com/Augah2001/game-hub",
   },
   {
-    title: "AI Chat Application",
-    description: "Real-time chat application powered by AI with natural language processing and sentiment analysis.",
-    tags: ["TypeScript", "WebSocket", "OpenAI", "Redis"],
-    image: "https://images.unsplash.com/photo-1587560699334-cc4ff634909a?w=800&q=80",
+    title: "Accommodation App",
+    description: "Full-stack accommodation booking application with user authentication, property listings, and booking management system.",
+    tags: ["TypeScript", "React", "Node.js", "Database"],
+    image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80",
+    github: "https://github.com/Augah2001/accomodationApp",
   },
   {
-    title: "Portfolio Dashboard",
-    description: "Analytics dashboard for tracking portfolio performance with interactive charts and data visualization.",
-    tags: ["React", "D3.js", "TailwindCSS", "Firebase"],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+    title: "Heart Disease Prediction",
+    description: "Machine learning model for predicting heart disease using Jupyter Notebook, implementing data analysis and predictive algorithms.",
+    tags: ["Python", "Machine Learning", "Jupyter", "Data Science"],
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80",
+    github: "https://github.com/Augah2001/Heart-Disease-prediction",
+  },
+  {
+    title: "Game Web Platform",
+    description: "Gaming web platform built with modern TypeScript stack, providing interactive gaming experiences and user engagement features.",
+    tags: ["TypeScript", "React", "Web Platform"],
+    image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80",
+    github: "https://github.com/Augah2001/game-web-platform",
+  },
+  {
+    title: "Vidly App",
+    description: "Video rental application with JavaScript, featuring movie browsing, rental management, and user interaction capabilities.",
+    tags: ["JavaScript", "React", "Node.js"],
+    image: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=800&q=80",
+    github: "https://github.com/Augah2001/vidly-app",
+  },
+  {
+    title: "Cryptography",
+    description: "Python-based cryptography project implementing various encryption and decryption algorithms for secure communication.",
+    tags: ["Python", "Security", "Algorithms"],
+    image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800&q=80",
+    github: "https://github.com/Augah2001/cryptography",
   },
 ];
 
@@ -35,7 +59,7 @@ const Projects = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
+          {projects.slice(0, 6).map((project, index) => (
             <Card 
               key={index}
               className="group overflow-hidden bg-gradient-card backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-glow animate-in fade-in slide-in-from-bottom-8"
@@ -70,13 +94,14 @@ const Projects = () => {
                 </div>
 
                 <div className="flex gap-2 pt-2">
-                  <Button size="sm" variant="ghost" className="flex-1 hover:bg-primary/10">
+                  <Button 
+                    size="sm" 
+                    variant="ghost" 
+                    className="flex-1 hover:bg-primary/10"
+                    onClick={() => window.open(project.github, "_blank")}
+                  >
                     <Github className="h-4 w-4 mr-2" />
                     Code
-                  </Button>
-                  <Button size="sm" variant="ghost" className="flex-1 hover:bg-primary/10">
-                    <ExternalLink className="h-4 w-4 mr-2" />
-                    Live
                   </Button>
                 </div>
               </div>

@@ -4,22 +4,22 @@ const skills = [
   {
     icon: Code2,
     title: "Frontend Development",
-    items: ["React", "TypeScript", "Next.js", "TailwindCSS"],
+    items: ["React", "TypeScript", "JavaScript", "Vite"],
   },
   {
     icon: Database,
     title: "Backend & Database",
-    items: ["Node.js", "PostgreSQL", "MongoDB", "Redis"],
+    items: ["Node.js", "Python", "API Integration", "Data Management"],
   },
   {
     icon: Palette,
-    title: "Design & UX",
-    items: ["Figma", "UI/UX Design", "Responsive Design", "Animations"],
+    title: "Data Science & ML",
+    items: ["Machine Learning", "Jupyter Notebook", "Data Analysis", "Predictions"],
   },
   {
     icon: Zap,
-    title: "Tools & Others",
-    items: ["Git", "Docker", "AWS", "CI/CD"],
+    title: "Tools & Security",
+    items: ["Git", "Cryptography", "Algorithms", "Web Platforms"],
   },
 ];
 

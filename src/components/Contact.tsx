@@ -29,7 +29,7 @@ const Contact = () => {
             size="icon" 
             variant="outline"
             className="border-primary/30 hover:bg-primary/10 hover:border-primary/50 transition-all"
-            onClick={() => window.open("https://github.com", "_blank")}
+            onClick={() => window.open("https://github.com/augah2001", "_blank")}
           >
             <Github className="h-5 w-5" />
           </Button>
