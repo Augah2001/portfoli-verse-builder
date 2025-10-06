@@ -53,3 +53,19 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-gradient-background {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, hsl(263 70% 65%), hsl(217 91% 60%), hsl(222 47% 11%), hsl(217 33% 20%));
+  background-size: 400% 400%;
+  animation: gradient-animation 15s ease infinite;
+  opacity: 0.3; /* Adjust opacity as needed */
+  filter: blur(100px); /* Soften the gradient */
+}
